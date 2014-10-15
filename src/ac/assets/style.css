@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{ font:12px/1.5 Tahoma,Arial,'宋体'; }
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none; font-size:100%;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;}
+
+html,body{ height:100%; width:100%; overflow:hidden; background:#5e5e5e;}
+body{ background:url(img/bg.jpg) repeat center center; background-size:195px 191px;}
+.calendar_wrap{ height:416px; width:320px; display:block; position:absolute; left:50%; top:0; margin-left:-160px;}
+.calendar_wrap .calendar_page{ height:100%; width:100%; display:block; position:absolute; left:0; top:0; background:#ebe7db url(img/1.jpg) no-repeat center top; background-size:320px auto;}
+.calendar_wrap .calendar_page_1{ background-image:url(img/1.jpg); z-index:12;}
+.calendar_wrap .calendar_page_2{ background-image:url(img/2.jpg); z-index:11;}
+.calendar_wrap .calendar_page_3{ background-image:url(img/3.jpg); z-index:10;}
+.calendar_wrap .calendar_page_4{ background-image:url(img/4.jpg); z-index:9;}
+.calendar_wrap .calendar_page_5{ background-image:url(img/5.jpg); z-index:8;}
+.calendar_wrap .calendar_page_6{ background-image:url(img/6.jpg); z-index:7;}
+.calendar_wrap .calendar_page_7{ background-image:url(img/7.jpg); z-index:6;}
+.calendar_wrap .calendar_page_8{ background-image:url(img/8.jpg); z-index:5;}
+.calendar_wrap .calendar_page_9{ background-image:url(img/9.jpg); z-index:4;}
+.calendar_wrap .calendar_page_10{ background-image:url(img/10.jpg); z-index:3;}
+.calendar_wrap .calendar_page_11{ background-image:url(img/11.jpg); z-index:2;}
+.calendar_wrap .calendar_page_12{ background-image:url(img/12.jpg); z-index:1;}
+.calendar_wrap .calendar_page_12 .link_1{ display:block; height:40px; width:100px; position:absolute; left:50%; margin-left:-113px; top:334px; text-indent:-9999px; overflow:hidden; z-index:3;}
+.calendar_wrap .calendar_page_12 .link_2{ display:block; height:40px; width:100px; position:absolute; left:50%; margin-left:15px; top:334px; text-indent:-9999px; overflow:hidden; z-index:3;}
+.calendar_wrap .hr_logo{ display:block; height:41px; width:125px; background:url(img/hr_logo.png) no-repeat 0 0; background-size:125px 41px; position:absolute; left:50%; margin-left:-62px; top:440px; text-indent:-9999px; overflow:hidden;}
+
+
+.calendar_wrap .hook{ display:block; width:316px; position:absolute; background:-webkit-linear-gradient(top,#dbd9d2,#e0dcd2); bottom:-40px; bottom:13px; right:2px;  -webkit-mask:-webkit-linear-gradient(-263deg,rgba(0,0,0,0) 24%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 45%,rgba(0,0,0,0) 80%); opacity:0;}
+
+.calendar_wrap .corner{ display: block; width:316px; background:url(img/corner.png) no-repeat right bottom; background-size:contain; position:absolute; bottom:13px;  right:2px; -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4)); opacity:0; height:70px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
+
+.calendar_wrap .page_up{ -webkit-animation:a_turning_up 0.6s linear both;}
+.calendar_wrap .page_up .hook{ -webkit-animation:a_hook_up 0.12s linear both;}
+.calendar_wrap .page_up .corner{  -webkit-animation:a_corner_up 0.12s linear both;}
+
+@-webkit-keyframes a_corner_up{
+	0%{-webkit-transform: translate(0,0); opacity:0; height:70px; bottom:13px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
+	20%{-webkit-transform: translate(0,0px); opacity:1; height:105px; bottom:13px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
+	100%{-webkit-transform: translate(0,53px); opacity:1; height:105px; bottom:20px;-webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));}
+}
+
+@-webkit-keyframes a_hook_up{
+	0%{-webkit-transform: translate(0,0); opacity:0; height:70px; bottom:13px;}
+	20%{-webkit-transform: translate(0,0px); opacity:1; height:120px; bottom:13px;}
+	100%{-webkit-transform: translate(0,53px); opacity:1; height:120px; bottom:22px;}
+}
+
+@-webkit-keyframes a_turning_up{
+	0%{ height:416px;  -webkit-transform:translate(0,0);}
+	80%{ height:0;  -webkit-transform:translate(0,0);}
+	100%{ height:0;  -webkit-transform:translate(0,-40px);}
+}
+
+.calendar_wrap .calendar_page_upend{ height:0;  -webkit-transform:translate(0,-40px);}
+.calendar_wrap .calendar_page_upend .hook{-webkit-transform: translate(0,53px); opacity:1; height:120px; bottom:22px;}
+.calendar_wrap .calendar_page_upend .corner{-webkit-transform: translate(0,53px); opacity:1; height:105px; bottom:20px; -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));}
+
+.calendar_wrap .page_down{ -webkit-animation:a_turning_down 0.6s linear both;}
+.calendar_wrap .page_down .hook{ -webkit-animation:a_hook_down 0.12s 0.5s linear both;}
+.calendar_wrap .page_down .corner{  -webkit-animation:a_corner_down 0.12s 0.5s linear both;}
+
+@-webkit-keyframes a_corner_down{
+	0%{-webkit-transform: translate(0,53px); opacity:1; height:105px; bottom:20px;-webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));}
+	80%{-webkit-transform: translate(0,0px); opacity:0.8; height:105px; bottom:13px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
+	100%{-webkit-transform: translate(0,0); opacity:0; height:70px; bottom:13px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
+}
+
+@-webkit-keyframes a_hook_down{
+	0%{-webkit-transform: translate(0,53px); opacity:1; height:120px; bottom:22px;}
+	80%{-webkit-transform: translate(0,0px); opacity:0.8; height:120px; bottom:13px;}
+	100%{-webkit-transform: translate(0,0px); opacity:0; height:70px; bottom:13px;}
+}
+
+@-webkit-keyframes a_turning_down{
+	0%{ height:0;  -webkit-transform:translate(0,-40px);}
+	20%{ height:0;  -webkit-transform:translate(0,0);}
+	100%{ height:416px;  -webkit-transform:translate(0,0);}
+}
