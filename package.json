@@ -1,0 +1,12 @@
+{
+    "name": "job",
+    "version": "1.0.0",
+    "description": "招聘专场",
+    "homepage": "http://job.asoiso.com/",
+    "keywords": ["job.asoiso.com"],
+    "author": "asoiso <asoiso@foxmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:asoiso-team/job.git"
+    }
+}
